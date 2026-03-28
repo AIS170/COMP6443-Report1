@@ -1,3 +1,4 @@
 LFI 
-?page=pages/../../../../proc/self/environ
+
+"?page=pages/../../../../proc/self/environ"
 
