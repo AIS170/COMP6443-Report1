@@ -27,7 +27,7 @@ for i in range(1, recent_req):
             print(f"\n[+] Flag found at ID {i}!")
             print(f"URL: {url}")
             print(f"Flag: {match.group(0)}")
-            break # Stop once we find it
+            break 
                 
     except requests.exceptions.RequestException as e:
         print(f"Error at ID {i}: {e}")
